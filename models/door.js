@@ -2,10 +2,10 @@ import {Entity} from "./entity.js";
 import {spriteManager} from "../managers/spriteManager.js";
 import {gameManager} from "../managers/gameManager.js";
 
-export class Chest extends Entity{
+export class Door extends Entity{
+
     constructor() {
         super();
-        this.spriteName = 'chest';
     }
 
     draw(ctx){

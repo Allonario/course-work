@@ -3,6 +3,8 @@ export class Entity{
     posY = 0;
     sizeX = 0;
     sizeY = 0;
+    name = ''
+    spriteName = '';
 }
 
 export let entity = new Entity();

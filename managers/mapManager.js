@@ -80,12 +80,15 @@ export class MapManager{
                             let obj = new gameManager.factory[entity.type];
                             obj.name = entity.name;
                             obj.posX = entity.x;
-                            obj.posY = entity.y;
+                            obj.posY = entity.y - 32;
                             obj.sizeX = entity.width;
                             obj.sizeY = entity.height;
                             gameManager.entities.push(obj);
-                            if(obj.name === 'player'){
+                            if(entity.type === 'player'){
                                 gameManager.initPlayer(obj);
+                            } else if(entity.type === 'door'){
+                                obj.name = entity.type;
+                                obj.spriteName = entity.name
                             }
                         } catch (ex){
                             console.log("ERROR while creating:[" + entity.gid + "]" + entity.type + "," + ex);
@@ -132,6 +135,11 @@ export class MapManager{
             }
         }
         return null;
+    }
+
+    getTileId(x, y, layerNumber){
+        const id = Math.floor(y / this.#tSize.y) * this.#xCount + Math.floor(x / this.#tSize.x);
+        return  this.#mapData.layers[layerNumber].data[id];
     }
 }
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/level.css">
+</head>
+<body>
+    <div id="mainContainer">
+        <canvas id="gameField" width="960" height="640">
+        </canvas>
+        <div id="infoContainer">
+            <span id='level'>LEVEL 1</span>
+            <div id="gameInfo">
+                <span id="HPText">HP: <span id="HP"></span></span>
+                <span id="scoreText">Очки: <span id="Score"></span></span>
+                <span id="KeyText">Ключ: <span id="Key">Не найден</span></span>
+            </div>
+        </div>
+        <script src="managers/spriteManager.js" type="module"></script>
+        <script src="managers/gameManager.js" type="module"></script>
+        <script src="managers/mapManager.js" type="module"></script>
+        <script src="level.js" type="module"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#mainContainer{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#infoContainer{
+    margin-left: 20px;
+}
+ #gameInfo{
+     display: flex;
+     flex-direction: column;
+ }
